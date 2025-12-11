@@ -49,11 +49,25 @@ body {
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
-    background-color: #5856d6;
-    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
     margin-right: 0.75rem;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    position: relative;
+}
+
+.logo-icon::before {
+    content: 'W';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-links {
@@ -528,6 +542,7 @@ body {
     
 
 
+
     .hero-content h1 {
         font-size: 2.25rem;
     }
@@ -833,3 +848,403 @@ body {
         max-width: 300px;
     }
 }
+
+/* --- Contact Page --- */
+.contact-hero {
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+.contact-intro {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(101, 119, 134, 0.08);
+}
+
+.contact-info-column h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-text {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1.25rem;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid #eef2ff;
+}
+
+.contact-info-item > div:not(.contact-info-icon) {
+    text-align: center;
+    flex: 1;
+}
+
+.contact-info-item h4,
+.contact-info-item p {
+    display: inline;
+    width: auto;
+    text-align: left;
+}
+
+.contact-info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: var(--icon-bg);
+    color: var(--icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem;
+}
+
+.contact-form-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(101, 119, 134, 0.08);
+}
+
+.contact-form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.form-row .full {
+    flex: 1;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem 0.85rem;
+    border-radius: 10px;
+    border: 1px solid #dde2eb;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    background-color: #f9fafb;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #5856d6;
+    box-shadow: 0 0 0 3px rgba(88, 86, 214, 0.15);
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-submit-btn {
+    margin-top: 0.75rem;
+    padding-inline: 2rem;
+}
+
+.contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-sidebar-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #eef2ff;
+    box-shadow: 0 8px 25px rgba(101, 119, 134, 0.06);
+}
+
+.contact-sidebar-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--icon-bg);
+    color: var(--icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-sidebar-text h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.contact-sidebar-text p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* --- About Page --- */
+.about-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.about-hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    color: #111;
+}
+
+.about-text p {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.stat-card-large {
+    background-color: #f8fbff;
+    border: 1px solid #eef2ff;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stat-card-large h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card-large p {
+    font-size: 1.125rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.text-blue {
+    color: #2979ff;
+}
+
+.text-purple {
+    color: #a855f7;
+}
+
+@media (max-width: 768px) {
+    .about-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- Team Section --- */
+.team-section {
+    margin-top: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    text-align: left;
+}
+
+.team-photo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Values Section --- */
+.values-section {
+    margin-top: 4rem;
+}
+
+.values-card {
+    background-color: #fff;
+    border: 1px solid #eef2ff;
+    border-radius: 24px;
+    padding: 3rem;
+}
+
+.values-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.values-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+.values-header p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.value-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--icon-bg);
+    color: var(--icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.value-text h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.25rem;
+}
+
+.value-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
