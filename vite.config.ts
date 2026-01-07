@@ -8,7 +8,7 @@ import nightwatchPlugin from 'vite-plugin-nightwatch'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/ppwi.me/',
   plugins: [
     vue(),
     vueJsx(),

@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "nightwatch tests/e2e/*",
@@ -25,6 +27,7 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "@nightwatch/vue": "^3.1.2",
     "@tsconfig/node24": "^24.0.3",
     "@types/jsdom": "^27.0.0",
