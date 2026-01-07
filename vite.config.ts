@@ -8,7 +8,10 @@ import nightwatchPlugin from 'vite-plugin-nightwatch'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/ppwi.me/',
+  // Use relative base so the built site works with a custom domain (CNAME)
+  // and when served from any path. This prevents absolute `/ppwi.me/` prefixes
+  // which break assets when the site is served at the domain root.
+  base: './',
   plugins: [
     vue(),
     vueJsx(),
