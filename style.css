@@ -253,7 +253,7 @@ body {
     color: #555;
 }
 
-/* --- Features  --- */
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -307,7 +307,7 @@ body {
     line-height: 1.6;
 }
 
-/* About */
+
 .about-section .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -381,7 +381,7 @@ body {
 }
 
 
-/*Footer*/
+
 .site-footer {
     background-color: #ffffff;
     padding: 4rem 0 2rem;
@@ -462,7 +462,7 @@ body {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
     .hero-section .container {
         grid-template-columns: 1fr;
@@ -633,7 +633,7 @@ body {
   }
 }
 
-/* --- Services --- */
+
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -849,7 +849,7 @@ body {
     }
 }
 
-/* --- Contact Page --- */
+
 .contact-hero {
     text-align: center;
 }
@@ -1061,7 +1061,7 @@ body {
     }
 }
 
-/* --- About Page --- */
+
 .about-hero-content {
     text-align: center;
     max-width: 800px;
@@ -1129,7 +1129,6 @@ body {
 }
 
 
-/* --- Team Section --- */
 .team-section {
     margin-top: 4rem;
 }
@@ -1173,7 +1172,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- Values Section --- */
+
 .values-section {
     margin-top: 4rem;
 }
